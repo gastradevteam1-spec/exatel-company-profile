@@ -123,3 +123,4 @@ Static assets (partner/group-company logos, real photography) belong in
   `VisionMission.tsx` for `next/image` when you have them.
 - Coverage coordinates are approximate city-level points, not exact PoP
   locations.
+# exatel-company-profile
