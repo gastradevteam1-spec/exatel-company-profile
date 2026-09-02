@@ -1,0 +1,39 @@
+/* Leaflet needs its own stylesheet; imported here (must precede all other
+   rules per CSS/Next.js's global-stylesheet requirements) so it's bundled
+   once, alongside Tailwind. */
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold tracking-tight text-ink;
+  }
+}
+
+@layer utilities {
+  .section-wrap {
+    @apply mx-auto max-w-content px-5 sm:px-8;
+  }
+  .kicker {
+    @apply flex items-center gap-2.5 font-mono text-xs text-violet mb-3;
+  }
+  .kicker-bar {
+    @apply w-5 h-0.5 bg-brand-gradient;
+  }
+  .grad-text {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+}
+
