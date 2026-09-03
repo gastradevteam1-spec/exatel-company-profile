@@ -1,12 +1,14 @@
 import Nav from "@/components/Nav";
-import Hero from "@/components/Hero";
+import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function PartnerPage() {
   return (
     <>
       <Nav />
-      <Hero />
+      <main>
+        <Partners />
+      </main>
       <Footer />
     </>
   );

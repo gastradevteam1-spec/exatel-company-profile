@@ -1,19 +1,21 @@
+import Link from "next/link";
+
 const links = [
-  { href: "#about", label: "Tentang" },
-  { href: "#services", label: "Layanan" },
-  { href: "#network", label: "Jaringan" },
-  { href: "#coverage", label: "Coverage" },
-  { href: "#partners", label: "Partner" },
+  { href: "/tentang", label: "Tentang" },
+  { href: "/layanan", label: "Layanan" },
+  { href: "/jaringan", label: "Jaringan" },
+  { href: "/coverage", label: "Coverage" },
+  { href: "/partner", label: "Partner" },
 ];
 
 export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-line">
       <div className="section-wrap flex items-center justify-between py-4">
-        <div className="flex items-center gap-2.5 font-display font-bold text-lg">
+        <Link href="/" className="flex items-center gap-2.5 font-display font-bold text-lg">
           <span className="w-[26px] h-[26px] rounded-full bg-brand-gradient shrink-0" />
           exatel
-        </div>
+        </Link>
         <nav className="hidden md:flex gap-7 text-sm text-muted">
           {links.map((link) => (
             <a
