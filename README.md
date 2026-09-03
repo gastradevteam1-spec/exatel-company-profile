@@ -3,7 +3,7 @@
 Rebuild of the Exatel (PT. Elemen Jaringan Nusantara) company profile PDF as
 a proper Next.js app, using the stack you asked for:
 
-- **Next.js 14** (App Router) + **React 18** + **TypeScript**
+- **Next.js 16** (App Router) + **React 19** + **TypeScript**
 - **Tailwind CSS** for styling, with a small brand token system in
   `tailwind.config.ts`
 - **Framer Motion** for the hero's animated fiber lines and the
