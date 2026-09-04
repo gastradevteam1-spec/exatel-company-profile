@@ -46,7 +46,7 @@ export default function VisionMission() {
             {groupCompanies.map((company, i) => (
               <div
                 key={company.name}
-                className={`p-7 border-b border-line flex items-center justify-center min-h-[200px] ${
+                className={`p-7 border-b border-line flex items-center justify-center min-h-[200px] bg-white dark:bg-[#c7cbe0] ${
                   i !== groupCompanies.length - 1 ? "sm:border-r" : ""
                 } border-line`}
               >
@@ -55,8 +55,8 @@ export default function VisionMission() {
                   alt={company.name}
                   width={200}
                   height={200}
-                  className="object-contain w-auto h-auto"
-                  style={{ maxWidth: '200px', height: 'auto' }}
+                  className="h-auto w-auto max-w-[200px] object-contain"
+                  style={{ maxHeight: "110px" }}
                 />
               </div>
             ))}
