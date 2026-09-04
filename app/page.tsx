@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import HomeSections from "@/components/HomeSections";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -7,6 +8,9 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
+      <main>
+        <HomeSections />
+      </main>
       <Footer />
     </>
   );
