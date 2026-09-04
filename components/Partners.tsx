@@ -13,7 +13,7 @@ export default function Partners() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex-1 min-w-[200px] border-r border-b border-line px-5 py-6 flex items-center justify-center min-h-[78px]"
+              className="flex-1 min-w-[200px] border-r border-b border-line px-5 py-6 flex items-center justify-center min-h-[78px] dark:bg-[#f4f5f9]"
             >
               <img
                 src={partner.image}
