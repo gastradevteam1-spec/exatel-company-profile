@@ -13,17 +13,12 @@ export default function Partners() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex-1 min-w-[200px] border-r border-b border-line px-5 py-6 flex items-center justify-center min-h-[78px] dark:bg-[#c7cbe0]"
+              className="flex-1 min-w-[200px] border-r border-b border-line px-5 py-6 flex items-center justify-center min-h-[78px] dark:bg-line"
             >
               <img
                 src={partner.image}
                 alt={partner.name}
-                style={{
-                  width: "auto",
-                  height: "auto",
-                  maxHeight: "60px",
-                  maxWidth: "100%",
-                }}
+                className="w-auto h-auto max-h-[60px] max-w-full"
               />
             </div>
           ))}

@@ -81,13 +81,16 @@
     @apply mx-auto max-w-content px-5 sm:px-8;
   }
   .kicker {
-    @apply flex items-center gap-2.5 font-mono text-xs text-violet mb-3;
+    @apply flex items-center gap-2.5 font-mono text-xs text-signal mb-3;
   }
   .kicker-bar {
     @apply w-5 h-0.5 bg-brand-gradient;
   }
   .grad-text {
     @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+  .h2 {
+    @apply text-[clamp(1.7rem,3vw,2.35rem)] leading-tight;
   }
 }
 

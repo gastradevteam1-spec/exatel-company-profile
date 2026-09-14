@@ -4,6 +4,11 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import { coverageRegions } from "@/data/coverage";
 
+// Mirrors the `ember`/`amber` tokens in tailwind.config.ts (and the legend
+// dots in Coverage.tsx) — Leaflet's JS API takes plain color strings, it
+// can't read Tailwind classes.
+const STATUS_COLOR = { available: "#D6294B", "coming-soon": "#e9b93a" };
+
 // We manage the Leaflet map imperatively (instead of react-leaflet's
 // <MapContainer>) because MapContainer doesn't reliably survive React's
 // dev-mode Strict Mode double effect invocation (mount -> cleanup -> mount
@@ -41,7 +46,7 @@ export default function CoverageMap() {
     }).addTo(map);
 
     coverageRegions.forEach((region) => {
-      const color = region.status === "available" ? "#D8207C" : "#e9b93a";
+      const color = STATUS_COLOR[region.status];
       L.circleMarker([region.lat, region.lng], {
         radius: 9,
         color,
@@ -65,7 +70,7 @@ export default function CoverageMap() {
 
   return (
     <div className="border border-line overflow-hidden">
-      <div ref={containerRef} style={{ height: "420px", width: "100%" }} />
+      <div ref={containerRef} className="h-[420px] w-full" />
     </div>
   );
 }

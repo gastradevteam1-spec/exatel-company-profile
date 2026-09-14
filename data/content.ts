@@ -5,7 +5,6 @@
 
 export const hero = {
   eyebrow: "PT. ELEMEN JARINGAN NUSANTARA",
-  headline: "Connecting the unconnected across Indonesia.",
   gradientWord: "the unconnected",
   sub: "Exatel adalah perusahaan yang berfokus pada infrastruktur telekomunikasi — penyedia jaringan fiber optic, layanan internet, dan solusi IT, dibangun di atas prinsip netralitas jaringan.",
 };
@@ -200,30 +199,12 @@ export const managedService = {
     "Monitoring & Troubleshooting",
   ],
   advantages: [
-    {
-      title: "Bebas biaya survey dan analisa kebutuhan",
-      body: "",
-    },
-    {
-      title: "Bebas biaya investasi pembangunan dan perawatan perangkat",
-      body: "",
-    },
-    {
-      title: "Bebas kekhawatiran dalam pemeliharaan dan keamanan jaringan",
-      body: "",
-    },
-    {
-      title: "Penggunaan perangkat dan sistem dengan teknologi yang terbaru",
-      body: "",
-    },
-    {
-      title: "Dukungan penggantian perangkat maksimal 1x24 jam (dengan syarat dan ketentuan)",
-      body: "",
-    },
-    {
-      title: "Dukungan Engineer On Site (EOS) 1x7 hari (dengan biaya tambahan)",
-      body: "",
-    },
+    "Bebas biaya survey dan analisa kebutuhan",
+    "Bebas biaya investasi pembangunan dan perawatan perangkat",
+    "Bebas kekhawatiran dalam pemeliharaan dan keamanan jaringan",
+    "Penggunaan perangkat dan sistem dengan teknologi yang terbaru",
+    "Dukungan penggantian perangkat maksimal 1x24 jam (dengan syarat dan ketentuan)",
+    "Dukungan Engineer On Site (EOS) 1x7 hari (dengan biaya tambahan)",
   ],
 };
 

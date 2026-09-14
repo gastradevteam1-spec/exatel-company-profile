@@ -15,11 +15,24 @@ const config: Config = {
         paper: "#F4F5F9",
         "paper-dim": "#E4E6F0",
         line: "#c7cbe0",
-        violet: "#5B3B9E",
-        blue: "#2F79D6",
-        magenta: "#D8207C",
-        cyan: "#26C7D9",
+        // Brand accents drawn from fiber-optic fault-locator light (the
+        // bright warm laser techs shine through a strand to find breaks),
+        // not a generic tech-gradient. One cool note ("glass", the fiber
+        // core itself) contrasts the two warm ones.
+        signal: "#FF7A33",
+        ember: "#D6294B",
+        glass: "#2FB8B0",
+        // "coming soon" coverage-status color — functional, decoupled from
+        // the brand accents above on purpose.
+        amber: "#e9b93a",
         muted: "#5b5f78",
+        body: "#33364f",
+        // text on permanently-dark surfaces (hero, stat boxes, footer)
+        // regardless of theme toggle — two weights for hierarchy
+        "ink-muted": "#a9b0e0",
+        "ink-soft": "#c4c8ea",
+        // text/border for normally-light elements once dark mode is on
+        "on-dark": "#e6e9ff",
       },
       fontFamily: {
         display: ["var(--font-space-grotesk)", "sans-serif"],
@@ -27,8 +40,7 @@ const config: Config = {
         mono: ["var(--font-plex-mono)", "monospace"],
       },
       backgroundImage: {
-        "brand-gradient":
-          "linear-gradient(90deg, #2F79D6, #5B3B9E 55%, #D8207C)",
+        "brand-gradient": "linear-gradient(90deg, #FF7A33, #D6294B)",
       },
       maxWidth: {
         content: "1100px",

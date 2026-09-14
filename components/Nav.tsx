@@ -11,13 +11,13 @@ const links = [
 
 export default function Nav() {
   return (
-    <header className="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-line dark:bg-ink/95 dark:border-[#30365d]">
+    <header className="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-line dark:bg-ink/95">
       <div className="section-wrap flex items-center gap-5 py-4">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 font-display font-bold text-lg">
           <span className="w-[26px] h-[26px] rounded-full bg-brand-gradient shrink-0" />
           exatel
         </Link>
-        <nav className="flex min-w-0 flex-1 justify-end gap-5 overflow-x-auto text-sm text-muted dark:text-[#e6e9ff] md:gap-7">
+        <nav className="flex min-w-0 flex-1 justify-end gap-5 overflow-x-auto text-sm text-muted dark:text-on-dark md:gap-7">
           {links.map((link) => (
             <a
               key={link.href}

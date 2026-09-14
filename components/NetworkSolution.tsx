@@ -20,7 +20,7 @@ export default function NetworkSolution() {
                 </span>
                 <h3 className="text-[1.45rem]">{block.title}</h3>
               </div>
-              <div className="flex flex-col gap-3 max-w-2xl text-[#33364f] mb-5">
+              <div className="flex flex-col gap-3 max-w-2xl text-body mb-5">
                 {block.paragraphs.map((p) => (
                   <p key={p}>{p}</p>
                 ))}

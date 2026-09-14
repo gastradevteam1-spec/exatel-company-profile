@@ -30,14 +30,14 @@ export default function Coverage() {
         <div className="mt-10 grid sm:grid-cols-2 md:grid-cols-4 gap-7">
           {coverageRegions.map((region) => (
             <div key={region.group}>
-              <h4 className="font-mono text-[0.85rem] text-violet mb-2.5 font-medium">
+              <h4 className="font-mono text-[0.85rem] text-signal mb-2.5 font-medium">
                 {region.group}
               </h4>
               <ul className="list-none p-0 m-0">
                 {region.cities.map((city) => (
                   <li
                     key={city}
-                    className="text-sm text-[#33364f] py-1 border-b border-dashed border-paper-dim"
+                    className="text-sm text-body py-1 border-b border-dashed border-paper-dim"
                   >
                     {city}
                   </li>
@@ -49,11 +49,11 @@ export default function Coverage() {
 
         <div className="mt-10 flex gap-7 text-sm text-muted">
           <span className="inline-flex items-center gap-2">
-            <i className="w-2.5 h-2.5 rounded-full bg-magenta inline-block" />
+            <i className="w-2.5 h-2.5 rounded-full bg-ember inline-block" />
             Tersedia
           </span>
           <span className="inline-flex items-center gap-2">
-            <i className="w-2.5 h-2.5 rounded-full bg-[#e9b93a] inline-block" />
+            <i className="w-2.5 h-2.5 rounded-full bg-amber inline-block" />
             Akan Tersedia
           </span>
         </div>

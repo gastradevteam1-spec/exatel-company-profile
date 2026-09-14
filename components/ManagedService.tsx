@@ -20,7 +20,7 @@ export default function ManagedService() {
                 </span>
                 <h3 className="text-[1.45rem]">{block.title}</h3>
               </div>
-              <div className="flex flex-col gap-3 max-w-2xl text-[#33364f]">
+              <div className="flex flex-col gap-3 max-w-2xl text-body">
                 {block.paragraphs.map((p) => (
                   <p key={p}>{p}</p>
                 ))}
@@ -31,16 +31,16 @@ export default function ManagedService() {
 
         <h3 className="mt-14 text-xl">Keunggulan Exatel Managed Service</h3>
         <div className="mt-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border border-line">
-          {managedService.advantages.map((adv, i) => (
+          {managedService.advantages.map((title, i) => (
             <div
-              key={adv.title}
+              key={title}
               className="p-6 border-b border-r border-line last:border-r-0 bg-white [&:nth-child(6n)]:border-r-0"
             >
-              <div className="font-mono text-blue text-sm font-semibold">
+              <div className="font-mono text-glass text-sm font-semibold">
                 {String(i + 1).padStart(2, "0")}
               </div>
               <div className="font-display font-semibold mt-2.5 text-[0.98rem] text-ink">
-                {adv.title}
+                {title}
               </div>
             </div>
           ))}
@@ -54,7 +54,7 @@ export default function ManagedService() {
               key={step}
               className="p-6 border-b border-r border-line last:border-r-0 bg-white [&:nth-child(5n)]:border-r-0"
             >
-              <div className="font-mono text-blue text-sm">
+              <div className="font-mono text-glass text-sm">
                 {String(i + 1).padStart(2, "0")}
               </div>
               <div className="font-display font-semibold mt-2.5 text-[0.98rem]">

@@ -3,7 +3,6 @@ import { visionMission, groupCompanies } from "@/data/content";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function VisionMission() {
-  // "use client"; // Uncomment if using dynamic features that require client-side rendering
   return (
     <section className="py-20 bg-white border-y border-line">
       <div className="section-wrap">
@@ -14,18 +13,18 @@ export default function VisionMission() {
 
         <div className="mt-12 grid sm:grid-cols-[1fr_1.4fr] border border-line">
           <div className="p-9 bg-ink text-white border-b sm:border-b-0 sm:border-r border-line">
-            <div className="font-mono text-xs text-cyan mb-3.5">VISI</div>
+            <div className="font-mono text-xs text-glass mb-3.5">VISI</div>
             <p className="font-display text-[1.35rem] leading-snug">
               {visionMission.vision}
             </p>
           </div>
           <div className="p-9">
-            <div className="font-mono text-xs text-violet mb-3.5">MISI</div>
+            <div className="font-mono text-xs text-signal mb-3.5">MISI</div>
             <ul className="flex flex-col">
               {visionMission.mission.map((item, i) => (
                 <li
                   key={item}
-                  className="flex gap-4 py-4 border-b border-paper-dim last:border-b-0 text-[#33364f]"
+                  className="flex gap-4 py-4 border-b border-paper-dim last:border-b-0 text-body"
                 >
                   <span className="font-mono text-muted text-sm pt-0.5">
                     {String(i + 1).padStart(2, "0")}
@@ -46,7 +45,7 @@ export default function VisionMission() {
             {groupCompanies.map((company, i) => (
               <div
                 key={company.name}
-                className={`p-7 border-b border-line flex items-center justify-center min-h-[200px] bg-white dark:bg-[#c7cbe0] ${
+                className={`p-7 border-b border-line flex items-center justify-center min-h-[200px] bg-white dark:bg-line ${
                   i !== groupCompanies.length - 1 ? "sm:border-r" : ""
                 } border-line`}
               >
@@ -55,8 +54,7 @@ export default function VisionMission() {
                   alt={company.name}
                   width={200}
                   height={200}
-                  className="h-auto w-auto max-w-[200px] object-contain"
-                  style={{ maxHeight: "110px" }}
+                  className="h-auto w-auto max-w-[200px] max-h-[110px] object-contain"
                 />
               </div>
             ))}

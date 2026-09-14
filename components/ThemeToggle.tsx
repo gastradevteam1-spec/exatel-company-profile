@@ -27,7 +27,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={isDark ? "Aktifkan light mode" : "Aktifkan dark mode"}
       title={isDark ? "Light mode" : "Dark mode"}
-      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-violet hover:text-ink dark:border-[#69729f] dark:text-[#e6e9ff] dark:hover:border-cyan dark:hover:text-white"
+      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-signal hover:text-ink dark:text-on-dark dark:hover:border-glass dark:hover:text-white"
     >
       {isDark ? <Sun size={15} aria-hidden="true" /> : <Moon size={15} aria-hidden="true" />}
     </button>

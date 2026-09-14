@@ -8,7 +8,7 @@ function MoreLink({ href, children }: { href: string; children: string }) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center gap-1.5 font-mono text-xs text-violet transition-colors hover:text-magenta"
+      className="inline-flex items-center gap-1.5 font-mono text-xs text-signal transition-colors hover:text-ember"
     >
       {children}
       <ArrowUpRight size={14} aria-hidden="true" />
@@ -29,7 +29,7 @@ export default function HomeSections() {
           <div className="section-wrap grid gap-8 md:grid-cols-[1fr_0.8fr] md:items-end">
             <div>
               <p className="kicker"><span className="kicker-bar" />{about.eyebrow}</p>
-              <h2 className="max-w-2xl text-[clamp(1.7rem,3vw,2.35rem)] leading-tight">
+              <h2 className="h2 max-w-2xl">
                 Infrastruktur netral untuk ekosistem digital Indonesia.
               </h2>
               <p className="mt-4 max-w-xl text-muted">{about.paragraphs[0]}</p>
@@ -51,7 +51,7 @@ export default function HomeSections() {
             <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="kicker"><span className="kicker-bar" />{servicesOverview.eyebrow}</p>
-                <h2 className="max-w-xl text-[clamp(1.7rem,3vw,2.35rem)] leading-tight">Tiga lini layanan, satu jaringan fiber optic.</h2>
+                <h2 className="h2 max-w-xl">Tiga lini layanan, satu jaringan fiber optic.</h2>
               </div>
               <MoreLink href="/layanan">Lihat layanan</MoreLink>
             </div>
@@ -73,12 +73,12 @@ export default function HomeSections() {
           <div className="section-wrap grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center">
             <div>
               <p className="kicker"><span className="kicker-bar" />INFRASTRUKTUR KAMI</p>
-              <h2 className="max-w-md text-[clamp(1.7rem,3vw,2.35rem)] leading-tight">Jaringan yang menghubungkan data center hingga bangunan.</h2>
+              <h2 className="h2 max-w-md">Jaringan yang menghubungkan data center hingga bangunan.</h2>
               <div className="mt-6"><MoreLink href="/jaringan">Jelajahi jaringan</MoreLink></div>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {networkSolution.blocks.map((block) => (
-                <div key={block.num} className="border-l-2 border-cyan pl-5">
+                <div key={block.num} className="border-l-2 border-glass pl-5">
                   <span className="font-mono text-xs text-muted">{block.num}</span>
                   <h3 className="mt-2 text-lg">{block.title}</h3>
                 </div>
@@ -92,9 +92,9 @@ export default function HomeSections() {
         <section className="bg-ink py-16 text-white border-b border-ink-2">
           <div className="section-wrap grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <p className="mb-3 flex items-center gap-2.5 font-mono text-xs text-cyan"><span className="h-0.5 w-5 bg-cyan" />COVERAGE AREA</p>
-              <h2 className="max-w-2xl text-[clamp(1.7rem,3vw,2.35rem)] leading-tight text-white">Menjangkau {coverageRegions.length} wilayah dengan {cityCount} kota dalam jaringan.</h2>
-              <p className="mt-4 max-w-xl text-[#c4c8ea]">Dari Jabodetabek hingga berbagai kota di Jawa, Bali, Kalimantan, dan Sulawesi.</p>
+              <p className="mb-3 flex items-center gap-2.5 font-mono text-xs text-glass"><span className="h-0.5 w-5 bg-glass" />COVERAGE AREA</p>
+              <h2 className="h2 max-w-2xl text-white">Menjangkau {coverageRegions.length} wilayah dengan {cityCount} kota dalam jaringan.</h2>
+              <p className="mt-4 max-w-xl text-ink-soft">Dari Jabodetabek hingga berbagai kota di Jawa, Bali, Kalimantan, dan Sulawesi.</p>
             </div>
             <MoreLink href="/coverage">Lihat coverage</MoreLink>
           </div>
@@ -106,7 +106,7 @@ export default function HomeSections() {
           <div className="section-wrap flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="kicker"><span className="kicker-bar" />OUR PARTNERS</p>
-              <h2 className="max-w-xl text-[clamp(1.7rem,3vw,2.35rem)] leading-tight">Bertumbuh bersama pemain kunci ekosistem telekomunikasi.</h2>
+              <h2 className="h2 max-w-xl">Bertumbuh bersama pemain kunci ekosistem telekomunikasi.</h2>
               <p className="mt-4 text-muted">Kolaborasi yang memperluas konektivitas dan membuka peluang baru.</p>
             </div>
             <div className="flex items-end gap-8">

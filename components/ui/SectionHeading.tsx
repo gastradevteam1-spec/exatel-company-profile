@@ -15,9 +15,7 @@ export default function SectionHeading({
         <span className="kicker-bar" />
         {eyebrow}
       </div>
-      <h2 className="text-[clamp(1.7rem,3vw,2.35rem)] max-w-xl leading-tight">
-        {title}
-      </h2>
+      <h2 className="h2 max-w-xl">{title}</h2>
       {lede && (
         <p className="mt-4 max-w-xl text-muted text-[1.02rem]">{lede}</p>
       )}

@@ -25,7 +25,7 @@ export default function ServicesOverview() {
                 {item.tags.map((tag) => (
                   <li
                     key={tag}
-                    className="text-sm px-3.5 py-1.5 border border-line rounded-full text-[#33364f] bg-white"
+                    className="text-sm px-3.5 py-1.5 border border-line rounded-full text-body bg-white"
                   >
                     {tag}
                   </li>
