@@ -11,15 +11,11 @@ export default function NetworkSolution() {
           title={networkSolution.title}
         />
 
+        {/* Two parallel offerings, not a sequence — no step numbers. */}
         <div className="mt-12 flex flex-col gap-14">
           {networkSolution.blocks.map((block) => (
-            <div key={block.num}>
-              <div className="flex items-baseline gap-4 mb-4">
-                <span className="font-display text-2xl font-semibold text-line">
-                  {block.num}
-                </span>
-                <h3 className="text-[1.45rem]">{block.title}</h3>
-              </div>
+            <div key={block.title} className="border-l-2 border-glass pl-6">
+              <h3 className="text-[1.45rem] mb-4">{block.title}</h3>
               <div className="flex flex-col gap-3 max-w-2xl text-body mb-5">
                 {block.paragraphs.map((p) => (
                   <p key={p}>{p}</p>

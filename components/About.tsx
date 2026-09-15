@@ -5,8 +5,8 @@ export default function About() {
   return (
     <section id="about" className="py-20">
       <div className="section-wrap">
-        <SectionHeading eyebrow={about.eyebrow} title={about.title} />
-        <div className="mt-12 grid md:grid-cols-[1.1fr_1fr] gap-14 items-start">
+        <SectionHeading as="h1" eyebrow={about.eyebrow} title={about.title} />
+        <div className="mt-12 grid md:grid-cols-[1.1fr_1fr] gap-14 items-stretch">
           <div className="flex flex-col gap-4 text-body">
             {about.paragraphs.map((p) => (
               <p key={p}>{p}</p>

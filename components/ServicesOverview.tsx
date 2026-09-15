@@ -6,10 +6,14 @@ export default function ServicesOverview() {
     <section id="services" className="py-20 bg-white border-y border-line">
       <div className="section-wrap">
         <SectionHeading
+          as="h1"
           eyebrow={servicesOverview.eyebrow}
           title={servicesOverview.title}
           lede={servicesOverview.lede}
         />
+        {/* Table of contents for the three sections further down this
+            page — tags stay as a quick preview, name links straight to
+            the full section instead of restating it here. */}
         <div className="mt-12 flex flex-col">
           {servicesOverview.items.map((item, i) => (
             <div
@@ -20,7 +24,12 @@ export default function ServicesOverview() {
                   : ""
               }`}
             >
-              <h3 className="text-[1.3rem]">{item.name}</h3>
+              <a
+                href={`#${item.anchor}`}
+                className="focus-ring rounded text-[1.3rem] transition-colors hover:text-signal active:opacity-70"
+              >
+                {item.name}
+              </a>
               <ul className="flex flex-wrap gap-2.5 list-none p-0 m-0">
                 {item.tags.map((tag) => (
                   <li

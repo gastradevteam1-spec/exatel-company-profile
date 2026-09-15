@@ -24,6 +24,10 @@
 }
 
 @layer base {
+  .dark {
+    color-scheme: dark;
+  }
+
   .dark body {
     background-color: #0b0e23;
     color: #f4f5f9;
@@ -59,11 +63,7 @@
   }
 
   .dark .text-muted,
-  .dark .text-\[\#33364f\] {
-    color: #b9bfdf;
-  }
-
-  .dark .text-\[\#a9b0e0\] {
+  .dark .text-body {
     color: #b9bfdf;
   }
 
@@ -90,7 +90,10 @@
     @apply bg-brand-gradient bg-clip-text text-transparent;
   }
   .h2 {
-    @apply text-[clamp(1.7rem,3vw,2.35rem)] leading-tight;
+    @apply text-[clamp(1.7rem,3vw,2.35rem)] leading-tight text-pretty;
+  }
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-paper dark:focus-visible:ring-offset-ink;
   }
 }
 

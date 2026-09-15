@@ -3,9 +3,18 @@
 // via a CMS — see the README for how to swap this for a real CMS fetch
 // without touching any component).
 
+// Shared between Nav.tsx (primary nav) and Footer.tsx (repeated links) so
+// the two never drift out of sync when a route is added/renamed.
+export const navLinks = [
+  { href: "/tentang", label: "Tentang" },
+  { href: "/layanan", label: "Layanan" },
+  { href: "/coverage", label: "Coverage" },
+  { href: "/partner", label: "Partner" },
+];
+
 export const hero = {
   eyebrow: "PT. ELEMEN JARINGAN NUSANTARA",
-  gradientWord: "the unconnected",
+  gradientWord: "yang belum terhubung",
   sub: "Exatel adalah perusahaan yang berfokus pada infrastruktur telekomunikasi — penyedia jaringan fiber optic, layanan internet, dan solusi IT, dibangun di atas prinsip netralitas jaringan.",
 };
 
@@ -30,7 +39,7 @@ export const visionMission = {
   vision:
     "Menjadi perusahaan penyedia infrastruktur fiber optic, internet dan solusi IT terbaik bagi pelanggan dan mitra bisnis.",
   mission: [
-    "Menyediakan layanan terbaik yang dapat diandalkan oleh pelanggan.",
+    "Menjaga jaringan tetap berjalan dan responsif terhadap kebutuhan pelanggan.",
     "Menjalin hubungan bisnis dan menjadi rekan bisnis yang baik dengan mengutamakan etika bisnis.",
     "Memberikan kontribusi lebih dalam pengembangan infrastruktur jaringan telekomunikasi untuk masyarakat Indonesia.",
     "Menciptakan lapangan kerja dan meningkatkan kualitas sumber daya manusia yang profesional dan kompeten.",
@@ -66,7 +75,7 @@ export const whyUs = {
     {
       tag: "SDM",
       title: "Handal",
-      body: "Selain investasi pada teknologi canggih, Exatel didukung oleh sumber daya manusia yang profesional dan kompeten di bidang telekomunikasi, menjamin layanan yang andal dan dapat diandalkan.",
+      body: "Selain investasi pada teknologi canggih, Exatel didukung oleh tim teknis yang siaga menangani gangguan di lapangan, bukan sekadar customer service di balik telepon.",
     },
   ],
 };
@@ -74,18 +83,24 @@ export const whyUs = {
 export const servicesOverview = {
   eyebrow: "LAYANAN KAMI",
   title: "Tiga lini layanan, satu jaringan fiber optic.",
-  lede: "Exatel menyediakan berbagai produk dan jasa yang dirancang untuk memberikan solusi handal sesuai kebutuhan pelanggan, memungkinkan pelanggan untuk fokus pada pengembangan bisnis dengan dukungan jaringan komunikasi yang lancar, cepat dan stabil.",
+  lede: "Tiga lini layanan berjalan di atas satu jaringan fiber optic yang sama — dari penyediaan akses ke ISP lain, koneksi internet langsung, hingga pengelolaan penuh infrastruktur pelanggan.",
+  // `anchor` jumps to that service's own full section further down this
+  // same page — this list is a table of contents, not a second copy of
+  // the detail (see ServicesOverview.tsx).
   items: [
     {
       name: "Exatel Network Solution",
+      anchor: "network",
       tags: ["FTTH Open Access", "Local loop / Metro Ethernet"],
     },
     {
       name: "Exatel Internet Service",
+      anchor: "internet",
       tags: ["Internet Dedicated", "Internet Broadband Bisnis"],
     },
     {
       name: "Exatel Managed Service",
+      anchor: "managed",
       tags: [
         "WiFi Managed Service",
         "Network Managed Service",
@@ -101,7 +116,6 @@ export const networkSolution = {
     "Jaringan fiber optic dari pusat data hingga ke setiap bangunan.",
   blocks: [
     {
-      num: "01",
       title: "Exatel FTTH Open Access",
       paragraphs: [
         "Exatel menawarkan kerjasama untuk menyediakan layanan FTTH Open Access bagi semua penyedia internet — baik Internet Service Provider (ISP) maupun Subnet/Reseller resmi ISP. Exatel bertanggung jawab atas pembangunan jaringan FTTH melalui survei, penyediaan kabel serat optik, pemasangan dan commissioning, Optical Distribution Point (ODP), serta tiang distribusi, hingga terhubung ke Customer Premise Equipment (ONT) di lokasi pengguna akhir.",
@@ -109,10 +123,9 @@ export const networkSolution = {
       ],
     },
     {
-      num: "02",
       title: "Exatel Local Loop / Metro Ethernet",
       paragraphs: [
-        "Pengeran Local Loop adalah koneksi yang menghubungkan pengguna akhir dengan penyedia layanan telekomunikasi. Biasanya pengguna ini berupa bisnis atau perusahaan yang ingin mengembangkan bisnisnya. Dengan adanya local loop, pengguna bisa terhubung dengan jaringan telekomunikasi yang lebih besar dan terpusat. Local loop atau yang juga dikenal sebagai Metro Ethernet, mendukung beberapa metode penerapan sesuai kebutuhan pelanggan, antara lain:",
+        "Pengeran Local Loop adalah koneksi yang menghubungkan pengguna akhir dengan penyedia layanan telekomunikasi — biasanya kantor pusat dan cabang yang perlu terhubung ke satu jaringan telekomunikasi yang sama dan terpusat. Local loop atau yang juga dikenal sebagai Metro Ethernet, mendukung beberapa metode penerapan sesuai kebutuhan pelanggan, antara lain:",
       ],
       features: [
         "Point to Point — koneksi langsung antara dua titik.",
@@ -126,10 +139,9 @@ export const networkSolution = {
 export const internetService = {
   eyebrow: "EXATEL INTERNET SERVICE",
   title: "Koneksi internet global di atas jaringan fiber optic Exatel.",
-  lede: "Dirancang untuk memenuhi kebutuhan akses internet pelanggan, khususnya perusahaan yang ingin meningkatkan bisnisnya, dengan dukungan perangkat berteknologi modern dan tim profesional yang berpengalaman.",
+  lede: "Dirancang untuk kebutuhan akses internet perusahaan, dari koneksi dedicated dengan bandwidth terjamin hingga broadband bisnis yang lebih terjangkau, didukung perangkat berteknologi modern dan tim yang berpengalaman.",
   blocks: [
     {
-      num: "01",
       title: "Exatel Internet Dedicated",
       paragraphs: [
         "Memberikan koneksi internet global 24 jam dengan alokasi bandwidth dedicated (rasio 1:1), memastikan performa jaringan selalu optimal setiap saat — mendukung pengiriman dan penerimaan email, pengunduhan file, streaming online dan pertemuan virtual.",
@@ -146,10 +158,9 @@ export const internetService = {
       ],
     },
     {
-      num: "02",
       title: "Exatel Internet Broadband Bisnis",
       paragraphs: [
-        "Layanan broadband internet menggunakan teknologi fiber optic, dirancang untuk menyediakan internet berkecepatan tinggi yang stabil dan lebih terjangkau — solusi ideal bagi Usaha Kecil Menengah (UKM) yang ingin mengembangkan bisnisnya.",
+        "Layanan broadband internet menggunakan teknologi fiber optic, dirancang untuk menyediakan internet berkecepatan tinggi yang stabil dan lebih terjangkau — solusi ideal bagi Usaha Kecil Menengah (UKM) dengan anggaran yang lebih terbatas dibanding korporasi besar.",
       ],
       features: [
         "Kecepatan layanan mulai dari 100 Mbps hingga 1 Gbps",
@@ -170,21 +181,18 @@ export const managedService = {
   lede: "Managed Service adalah layanan manajemen IT yang disediakan pihak eksternal untuk membantu menyediakan, mengelola, mengawasi, dan memelihara infrastruktur — server, sistem operasi, dan jaringan — sehingga departemen IT pelanggan dapat lebih fokus pada inovasi bisnis utama.",
   blocks: [
     {
-      num: "01",
       title: "Exatel WiFi Managed Service",
       paragraphs: [
         "Manajemen WiFi dan perangkat pendukung seperti switch POE dan router. Tim IT Exatel melakukan survei dan analisa kebutuhan, merancang solusi ideal, mencakup pengadaan perangkat, pemasangan, konfigurasi, pemantauan dan pemeliharaan — dengan helpdesk 24/7.",
       ],
     },
     {
-      num: "02",
       title: "Exatel Network Managed Service",
       paragraphs: [
         "Pengelolaan jaringan Local Area Network (LAN), Wide Area Network (WAN), dan Software-Defined WAN (SD-WAN) untuk perusahaan dengan jaringan yang lebih luas, termasuk kantor pusat dan cabang yang aman dan optimal.",
       ],
     },
     {
-      num: "03",
       title: "Exatel Fiber Building Managed Service",
       paragraphs: [
         "Solusi infrastruktur gedung atau antar-gedung menggunakan jaringan fiber optic — survey analisis kebutuhan dan perancangan infrastruktur yang rapi, modern dan berkualitas tinggi, mendukung kebutuhan CCTV, komputer, dan VoIP dalam satu infrastruktur.",
@@ -228,5 +236,4 @@ export const partners = [
 export const footer = {
   tagline:
     "PT. Elemen Jaringan Nusantara — infrastruktur fiber optic, internet, dan solusi IT dengan pendekatan netralitas jaringan di seluruh Indonesia.",
-  servicesNote: "Network Solution · Internet Service · Managed Service",
 };

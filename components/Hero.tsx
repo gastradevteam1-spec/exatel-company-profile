@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { hero } from "@/data/content";
 
 // Mirrors the `signal`/`ember`/`glass` tokens in tailwind.config.ts — SVG
@@ -17,12 +17,15 @@ const fiberPaths = [
 ];
 
 export default function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section className="relative overflow-hidden bg-ink text-paper pt-24 pb-20">
       <svg
         className="absolute inset-0 z-10 opacity-60"
         viewBox="0 0 1200 560"
         preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
       >
         <defs>
           {/* Signature detail: light enters bright (signal), then
@@ -39,21 +42,23 @@ export default function Hero() {
             <motion.path
               key={d}
               d={d}
-              initial={{ pathLength: 0, opacity: 0 }}
+              initial={prefersReducedMotion ? false : { pathLength: 0, opacity: 0 }}
               animate={{ pathLength: 1, opacity: 0.55 }}
-              transition={{
-                duration: 2.2,
-                delay: i * 0.25,
-                ease: "easeInOut",
-              }}
+              transition={
+                prefersReducedMotion
+                  ? { duration: 0 }
+                  : { duration: 2.2, delay: i * 0.25, ease: "easeInOut" }
+              }
             />
           ))}
         </g>
         <motion.g
           fill={GLASS}
-          initial={{ opacity: 0 }}
+          initial={prefersReducedMotion ? false : { opacity: 0 }}
           animate={{ opacity: 0.9 }}
-          transition={{ delay: 1.6, duration: 0.6 }}
+          transition={
+            prefersReducedMotion ? { duration: 0 } : { delay: 1.6, duration: 0.6 }
+          }
         >
           <circle cx={700} cy={300} r={3} />
           <circle cx={650} cy={220} r={3} />
@@ -63,28 +68,28 @@ export default function Hero() {
 
       <div className="section-wrap relative z-20">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-2.5 font-mono text-xs text-ink-muted mb-5"
+          className="flex items-center gap-2.5 font-mono text-xs text-glass mb-5"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-glass" />
           {hero.eyebrow}
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 16 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-[clamp(2.4rem,5.4vw,4.1rem)] leading-[1.04] max-w-3xl text-white"
+          className="text-pretty text-[clamp(2.4rem,5.4vw,4.1rem)] leading-[1.04] max-w-3xl text-white"
         >
-          Connecting{" "}
-          <span className="grad-text">{hero.gradientWord}</span> across
-          Indonesia.
+          Menghubungkan{" "}
+          <span className="grad-text whitespace-nowrap">{hero.gradientWord}</span> di
+          seluruh Indonesia.
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 max-w-xl text-[1.06rem] text-ink-soft"

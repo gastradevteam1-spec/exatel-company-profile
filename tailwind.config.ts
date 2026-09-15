@@ -22,8 +22,10 @@ const config: Config = {
         signal: "#FF7A33",
         ember: "#D6294B",
         glass: "#2FB8B0",
-        // "coming soon" coverage-status color — functional, decoupled from
-        // the brand accents above on purpose.
+        // Coverage-status colors — functional (map legend + markers), kept
+        // separate from the brand accents above so "available"/"coming
+        // soon" never doubles up with an interactive hover color.
+        live: "#4B9B6E",
         amber: "#e9b93a",
         muted: "#5b5f78",
         body: "#33364f",

@@ -4,10 +4,10 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import { coverageRegions } from "@/data/coverage";
 
-// Mirrors the `ember`/`amber` tokens in tailwind.config.ts (and the legend
+// Mirrors the `live`/`amber` tokens in tailwind.config.ts (and the legend
 // dots in Coverage.tsx) — Leaflet's JS API takes plain color strings, it
 // can't read Tailwind classes.
-const STATUS_COLOR = { available: "#D6294B", "coming-soon": "#e9b93a" };
+const STATUS_COLOR = { available: "#4B9B6E", "coming-soon": "#e9b93a" };
 
 // We manage the Leaflet map imperatively (instead of react-leaflet's
 // <MapContainer>) because MapContainer doesn't reliably survive React's

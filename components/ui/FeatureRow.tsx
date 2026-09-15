@@ -8,7 +8,7 @@ export default function FeatureList({ items }: { items: string[] }) {
             i % 2 === 1 ? "bg-paper-dim/40 dark:bg-ink" : ""
           }`}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-ember shrink-0" />
+          <span className="w-1.5 h-1.5 rounded-full bg-signal shrink-0" />
           {item}
         </div>
       ))}

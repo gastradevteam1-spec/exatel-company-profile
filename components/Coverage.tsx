@@ -19,6 +19,7 @@ export default function Coverage() {
     <section id="coverage" className="py-20 bg-white border-y border-line">
       <div className="section-wrap">
         <SectionHeading
+          as="h1"
           eyebrow="COVERAGE AREA"
           title="Jaringan Exatel telah menjangkau berbagai wilayah di Indonesia."
         />
@@ -49,11 +50,11 @@ export default function Coverage() {
 
         <div className="mt-10 flex gap-7 text-sm text-muted">
           <span className="inline-flex items-center gap-2">
-            <i className="w-2.5 h-2.5 rounded-full bg-ember inline-block" />
+            <span className="w-2.5 h-2.5 rounded-full bg-live inline-block" aria-hidden="true" />
             Tersedia
           </span>
           <span className="inline-flex items-center gap-2">
-            <i className="w-2.5 h-2.5 rounded-full bg-amber inline-block" />
+            <span className="w-2.5 h-2.5 rounded-full bg-amber inline-block" aria-hidden="true" />
             Akan Tersedia
           </span>
         </div>

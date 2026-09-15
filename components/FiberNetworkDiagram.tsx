@@ -1,20 +1,21 @@
 import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
+import diagram from "@/public/images/exatel-fiber-network.png";
 
 export default function FiberNetworkDiagram() {
   return (
-    <section className="py-20 bg-white border-y border-line">
+    <section id="fiber-network" className="py-20">
       <div className="section-wrap">
         <SectionHeading
-          eyebrow="INFRASTRUKTUR KAMI"
+          eyebrow="TOPOLOGI FIBER"
           title="Jaringan Fiber Optic Exatel"
           lede="Infrastruktur jaringan serat optik terdepan yang menghubungkan seluruh Indonesia dengan konektivitas berkualitas tinggi."
         />
         <div className="mt-12 flex justify-center">
-          <div className="w-full max-w-4xl border border-line rounded-lg bg-white p-6">
-            <img
-              src="/images/exatel-fiber-network.png"
-              alt="Exatel Fiber Network Diagram"
+          <div className="w-full max-w-4xl border border-line rounded-sm bg-white p-6">
+            <Image
+              src={diagram}
+              alt="Diagram topologi jaringan fiber optic Exatel dari pusat data hingga ke ODP dan pelanggan"
               className="w-full h-auto"
             />
           </div>
