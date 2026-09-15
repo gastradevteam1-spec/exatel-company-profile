@@ -8,11 +8,41 @@ import InternetService from "@/components/InternetService";
 import ManagedService from "@/components/ManagedService";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/ui/Reveal";
+import { servicesOverview } from "@/data/content";
+
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: servicesOverview.items.map((item, position) => ({
+    "@type": "Service",
+    position: position + 1,
+    name: item.name,
+    description: item.tags.join(" · "),
+    provider: {
+      "@type": "Organization",
+      name: "PT. Elemen Jaringan Nusantara (Exatel)",
+    },
+  })),
+};
 
 export const metadata: Metadata = {
   title: "Layanan — Network Solution, Internet Service & Managed Service | Exatel",
   description:
     "Exatel Network Solution, Internet Service, dan Managed Service — infrastruktur fiber optic, koneksi internet dedicated, dan pengelolaan IT untuk kebutuhan bisnis.",
+  openGraph: {
+    title: "Layanan — Network Solution, Internet Service & Managed Service | Exatel",
+    description:
+      "Exatel Network Solution, Internet Service, dan Managed Service — infrastruktur fiber optic, koneksi internet dedicated, dan pengelolaan IT untuk kebutuhan bisnis.",
+    siteName: "Exatel",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Layanan — Network Solution, Internet Service & Managed Service | Exatel",
+    description:
+      "Exatel Network Solution, Internet Service, dan Managed Service — infrastruktur fiber optic, koneksi internet dedicated, dan pengelolaan IT untuk kebutuhan bisnis.",
+  },
 };
 
 // Sections follow the order ServicesOverview lists them in: Network
@@ -25,6 +55,10 @@ export default function ServicesPage() {
   return (
     <>
       <Nav />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <main id="main-content">
         <Reveal><ServicesOverview /></Reveal>
         <Reveal delay={0.04}><FiberNetworkDiagram /></Reveal>

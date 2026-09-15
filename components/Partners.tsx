@@ -11,11 +11,11 @@ export default function Partners() {
           eyebrow="OUR PARTNERS"
           title="Bermitra dengan pemain kunci ekosistem telekomunikasi."
         />
-        <div className="mt-12 flex flex-wrap border-t border-l border-line">
+        <div className="mt-12 flex flex-wrap gap-2 rounded-sm border border-line bg-paper-dim/40 p-2 shadow-[0_18px_40px_rgba(7,9,24,0.18)] dark:border-ink-2 dark:bg-ink-2">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex-1 min-w-[200px] border-r border-b border-line px-5 py-6 flex items-center justify-center min-h-[78px] dark:bg-line"
+              className="flex-1 min-w-[200px] border-r border-b border-line bg-white px-5 py-6 flex items-center justify-center min-h-[78px] last:border-0 dark:border-0 dark:rounded-sm dark:bg-[#dfe3f2]"
             >
               <Image
                 src={partner.image}

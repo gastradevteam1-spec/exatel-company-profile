@@ -13,8 +13,8 @@ export default function Reveal({ children, delay = 0 }: RevealProps) {
 
   return (
     <motion.div
-      initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
-      whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+      initial={prefersReducedMotion ? false : { y: 10 }}
+      whileInView={prefersReducedMotion ? undefined : { y: 0 }}
       viewport={{ once: true, amount: 0.12 }}
       transition={{ duration: 0.55, delay, ease: "easeOut" }}
     >

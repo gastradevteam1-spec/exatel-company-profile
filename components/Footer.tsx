@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex justify-between flex-wrap gap-8">
           <div>
             <div className="flex items-center gap-2.5 font-display font-bold text-lg text-white">
-              <span className="w-[26px] h-[26px] rounded-full bg-brand-gradient shrink-0" aria-hidden="true" />
+              <span className="w-[26px] h-[26px] rounded-full bg-signal shrink-0" aria-hidden="true" />
               exatel
             </div>
             <p className="mt-2 text-sm max-w-[340px] text-ink-muted">

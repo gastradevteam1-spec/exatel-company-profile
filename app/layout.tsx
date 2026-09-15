@@ -41,8 +41,14 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
+    siteName: "Exatel",
     locale: "id_ID",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
   },
 };
 

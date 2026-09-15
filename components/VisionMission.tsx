@@ -41,13 +41,11 @@ export default function VisionMission() {
             <span className="kicker-bar" aria-hidden="true" />
             GROUP KAMI
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-line">
-            {groupCompanies.map((company, i) => (
+          <div className="grid grid-cols-1 gap-2 rounded-sm border border-line bg-paper-dim/40 p-2 shadow-[0_18px_40px_rgba(7,9,24,0.18)] sm:grid-cols-3 dark:border-ink-2 dark:bg-ink-2">
+            {groupCompanies.map((company) => (
               <div
                 key={company.name}
-                className={`p-7 border-b border-line flex items-center justify-center min-h-[200px] bg-white dark:bg-line ${
-                  i !== groupCompanies.length - 1 ? "sm:border-r" : ""
-                } border-line`}
+                className="flex min-h-[200px] items-center justify-center border-b border-line bg-white p-7 last:border-0 dark:border-0 dark:rounded-sm dark:bg-[#dfe3f2]"
               >
                 <Image
                   src={company.image}

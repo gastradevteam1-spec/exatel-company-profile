@@ -34,7 +34,7 @@ export default function ManagedService() {
               key={title}
               className="p-6 border-b border-r border-line last:border-r-0 bg-white [&:nth-child(6n)]:border-r-0"
             >
-              <span className="block w-1.5 h-1.5 rounded-full bg-glass mb-3" aria-hidden="true" />
+              <span className="block w-1.5 h-1.5 rounded-full bg-signal mb-3" aria-hidden="true" />
               <div className="font-display font-semibold text-[0.98rem] text-ink">
                 {title}
               </div>
@@ -50,7 +50,7 @@ export default function ManagedService() {
               key={step}
               className="p-6 border-b border-r border-line last:border-r-0 bg-white [&:nth-child(5n)]:border-r-0"
             >
-              <div className="font-mono text-glass text-sm">
+              <div className="font-mono text-signal text-sm">
                 {String(i + 1).padStart(2, "0")}
               </div>
               <div className="font-display font-semibold mt-2.5 text-[0.98rem]">

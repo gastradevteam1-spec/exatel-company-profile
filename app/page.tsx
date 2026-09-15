@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   title: "Exatel — Infrastruktur Fiber Optic, Internet & Solusi IT",
   description:
     "PT. Elemen Jaringan Nusantara (Exatel) — penyedia jaringan fiber optic, layanan internet, dan solusi IT dengan pendekatan netralitas jaringan di seluruh Indonesia.",
+  openGraph: {
+    title: "Exatel — Infrastruktur Fiber Optic, Internet & Solusi IT",
+    description:
+      "PT. Elemen Jaringan Nusantara (Exatel) — penyedia jaringan fiber optic, layanan internet, dan solusi IT dengan pendekatan netralitas jaringan di seluruh Indonesia.",
+    siteName: "Exatel",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Exatel — Infrastruktur Fiber Optic, Internet & Solusi IT",
+    description:
+      "PT. Elemen Jaringan Nusantara (Exatel) — penyedia jaringan fiber optic, layanan internet, dan solusi IT dengan pendekatan netralitas jaringan di seluruh Indonesia.",
+  },
 };
 
 export default function Home() {

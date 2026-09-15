@@ -68,29 +68,29 @@ export default function Hero() {
 
       <div className="section-wrap relative z-20">
         <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={prefersReducedMotion ? false : { y: 12 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-2.5 font-mono text-xs text-glass mb-5"
+          className="flex items-center gap-2.5 font-mono text-xs text-signal mb-5"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-glass" aria-hidden="true" />
+          <span className="w-1.5 h-1.5 rounded-full bg-signal" aria-hidden="true" />
           {hero.eyebrow}
         </motion.div>
 
         <motion.h1
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={prefersReducedMotion ? false : { y: 16 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-pretty text-[clamp(2.4rem,5.4vw,4.1rem)] leading-[1.04] max-w-3xl text-white"
         >
           Menghubungkan{" "}
-          <span className="grad-text whitespace-nowrap">{hero.gradientWord}</span> di
+          {hero.gradientWord} di
           seluruh Indonesia.
         </motion.h1>
 
         <motion.p
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={prefersReducedMotion ? false : { y: 16 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 max-w-xl text-[1.06rem] text-ink-soft"
         >

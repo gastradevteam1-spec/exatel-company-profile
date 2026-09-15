@@ -41,9 +41,7 @@ const config: Config = {
         body: ["var(--font-plex-sans)", "sans-serif"],
         mono: ["var(--font-plex-mono)", "monospace"],
       },
-      backgroundImage: {
-        "brand-gradient": "linear-gradient(90deg, #FF7A33, #D6294B)",
-      },
+
       maxWidth: {
         content: "1100px",
       },
