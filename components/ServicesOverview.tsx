@@ -18,7 +18,7 @@ export default function ServicesOverview() {
           {servicesOverview.items.map((item, i) => (
             <div
               key={item.name}
-              className={`py-7 grid sm:grid-cols-[220px_1fr] gap-4 sm:gap-8 items-start border-t border-line ${
+              className={`py-7 grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-4 sm:gap-8 items-start border-t border-line ${
                 i === servicesOverview.items.length - 1
                   ? "border-b border-line"
                   : ""

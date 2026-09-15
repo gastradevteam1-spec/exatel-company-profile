@@ -4,7 +4,7 @@ import FeatureList from "@/components/ui/FeatureRow";
 
 export default function NetworkSolution() {
   return (
-    <section id="network" className="py-20">
+    <section id="network" className="py-20 scroll-mt-20">
       <div className="section-wrap">
         <SectionHeading
           eyebrow={networkSolution.eyebrow}

@@ -38,10 +38,10 @@ export default function VisionMission() {
 
         <div className="mt-16">
           <div className="kicker">
-            <span className="kicker-bar" />
+            <span className="kicker-bar" aria-hidden="true" />
             GROUP KAMI
           </div>
-          <div className="grid sm:grid-cols-3 border-t border-line">
+          <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-line">
             {groupCompanies.map((company, i) => (
               <div
                 key={company.name}

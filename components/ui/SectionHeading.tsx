@@ -18,7 +18,7 @@ export default function SectionHeading({
   return (
     <div>
       <div className="kicker">
-        <span className="kicker-bar" />
+        <span className="kicker-bar" aria-hidden="true" />
         {eyebrow}
       </div>
       <Heading className="h2 max-w-xl">{title}</Heading>

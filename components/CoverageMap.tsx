@@ -70,7 +70,12 @@ export default function CoverageMap() {
 
   return (
     <div className="border border-line overflow-hidden">
-      <div ref={containerRef} className="h-[420px] w-full" />
+      <div
+        ref={containerRef}
+        role="application"
+        aria-label="Peta cakupan jaringan Exatel"
+        className="h-[420px] w-full"
+      />
     </div>
   );
 }

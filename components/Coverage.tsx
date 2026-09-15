@@ -8,7 +8,11 @@ import { coverageRegions } from "@/data/coverage";
 const CoverageMap = dynamic(() => import("@/components/CoverageMap"), {
   ssr: false,
   loading: () => (
-    <div className="h-[420px] border border-line bg-white flex items-center justify-center text-muted text-sm">
+    <div
+      role="status"
+      aria-live="polite"
+      className="h-[420px] border border-line bg-white flex items-center justify-center text-muted text-sm"
+    >
       Memuat peta cakupan…
     </div>
   ),
@@ -28,7 +32,7 @@ export default function Coverage() {
           <CoverageMap />
         </div>
 
-        <div className="mt-10 grid sm:grid-cols-2 md:grid-cols-4 gap-7">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7">
           {coverageRegions.map((region) => (
             <div key={region.group}>
               <h4 className="font-mono text-[0.85rem] text-signal mb-2.5 font-medium">

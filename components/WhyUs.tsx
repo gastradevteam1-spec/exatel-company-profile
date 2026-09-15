@@ -6,7 +6,7 @@ export default function WhyUs() {
     <section id="why" className="py-20">
       <div className="section-wrap">
         <SectionHeading eyebrow={whyUs.eyebrow} title={whyUs.title} />
-        <div className="mt-12 grid sm:grid-cols-2 gap-px bg-line border border-line">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-px bg-line border border-line">
           {whyUs.items.map((item) => (
             <div key={item.title} className="bg-white p-8">
               <span className="block font-mono text-glass text-sm mb-4">

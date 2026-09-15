@@ -4,7 +4,7 @@ import diagram from "@/public/images/exatel-fiber-network.png";
 
 export default function FiberNetworkDiagram() {
   return (
-    <section id="fiber-network" className="py-20">
+    <section id="fiber-network" className="py-20 scroll-mt-20">
       <div className="section-wrap">
         <SectionHeading
           eyebrow="TOPOLOGI FIBER"

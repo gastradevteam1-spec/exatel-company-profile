@@ -4,7 +4,7 @@ import FeatureList from "@/components/ui/FeatureRow";
 
 export default function InternetService() {
   return (
-    <section id="internet" className="py-20 bg-white border-y border-line">
+    <section id="internet" className="py-20 bg-white border-y border-line scroll-mt-20">
       <div className="section-wrap">
         <SectionHeading
           eyebrow={internetService.eyebrow}

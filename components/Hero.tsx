@@ -73,7 +73,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-2.5 font-mono text-xs text-glass mb-5"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-glass" />
+          <span className="w-1.5 h-1.5 rounded-full bg-glass" aria-hidden="true" />
           {hero.eyebrow}
         </motion.div>
 

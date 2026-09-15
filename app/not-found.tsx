@@ -10,7 +10,7 @@ export default function NotFound() {
       <main id="main-content">
         <section className="py-24">
           <div className="section-wrap">
-            <p className="kicker"><span className="kicker-bar" />404</p>
+            <p className="kicker"><span className="kicker-bar" aria-hidden="true" />404</p>
             <h1 className="h2 max-w-xl">Halaman tidak ditemukan.</h1>
             <p className="mt-4 max-w-xl text-muted">
               Halaman yang Anda cari mungkin sudah dipindahkan atau tidak

@@ -29,7 +29,7 @@ export default function HomeSections() {
         <section className="py-16 border-b border-line">
           <div className="section-wrap grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
             <div>
-              <p className="kicker"><span className="kicker-bar" />{about.eyebrow}</p>
+              <p className="kicker"><span className="kicker-bar" aria-hidden="true" />{about.eyebrow}</p>
               <h2 className="h2 max-w-2xl">
                 Infrastruktur netral untuk ekosistem digital Indonesia.
               </h2>
@@ -51,13 +51,13 @@ export default function HomeSections() {
           <div className="section-wrap">
             <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="kicker"><span className="kicker-bar" />{servicesOverview.eyebrow}</p>
+                <p className="kicker"><span className="kicker-bar" aria-hidden="true" />{servicesOverview.eyebrow}</p>
                 <h2 className="h2 max-w-xl">Dari kabel ke koneksi bisnis yang berjalan.</h2>
               </div>
               <MoreLink href="/layanan">Lihat layanan</MoreLink>
             </div>
             {/* Three parallel service lines, not a sequence — no numbers. */}
-            <div className="mt-10 grid gap-0 border-t border-line md:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-0 border-t border-line md:grid-cols-3">
               {servicesOverview.items.map((item) => (
                 <div key={item.name} className="border-b border-line py-6 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0">
                   <h3 className="text-xl">{item.name}</h3>
@@ -73,7 +73,7 @@ export default function HomeSections() {
         <section className="bg-ink py-16 text-white border-b border-ink-2">
           <div className="section-wrap grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <p className="mb-3 flex items-center gap-2.5 font-mono text-xs text-glass"><span className="h-0.5 w-5 bg-glass" />COVERAGE AREA</p>
+              <p className="mb-3 flex items-center gap-2.5 font-mono text-xs text-glass"><span className="h-0.5 w-5 bg-glass" aria-hidden="true" />COVERAGE AREA</p>
               <h2 className="h2 max-w-2xl text-white">Dari Jabodetabek sampai {cityCount} kota, satu peta yang sama.</h2>
               <p className="mt-4 max-w-xl text-ink-soft">Menjangkau {coverageRegions.length} wilayah di Jawa, Bali, Kalimantan, dan Sulawesi.</p>
             </div>
@@ -105,7 +105,7 @@ export default function HomeSections() {
               ))}
             </div>
             <div className="order-1 md:order-2">
-              <p className="kicker"><span className="kicker-bar" />OUR PARTNERS</p>
+              <p className="kicker"><span className="kicker-bar" aria-hidden="true" />OUR PARTNERS</p>
               <h2 className="h2 max-w-md">Nama-nama yang sudah terhubung ke jaringan kami.</h2>
               <p className="mt-4 max-w-md text-muted">Kolaborasi yang memperluas konektivitas dan membuka peluang baru.</p>
               <div className="mt-6"><MoreLink href="/partner">Lihat semua {partners.length} partner</MoreLink></div>

@@ -19,10 +19,10 @@ export default function Nav() {
       <header className="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-line dark:bg-ink/95">
         <div className="section-wrap flex items-center gap-5 py-4">
           <Link href="/" className="focus-ring rounded flex shrink-0 items-center gap-2.5 font-display font-bold text-lg">
-            <span className="w-[26px] h-[26px] rounded-full bg-brand-gradient shrink-0" />
+            <span className="w-[26px] h-[26px] rounded-full bg-brand-gradient shrink-0" aria-hidden="true" />
             exatel
           </Link>
-          <nav className="flex min-w-0 flex-1 justify-end gap-5 overflow-x-auto text-sm text-muted dark:text-on-dark md:gap-7">
+          <nav aria-label="Utama" className="flex min-w-0 flex-1 justify-end gap-5 overflow-x-auto text-sm text-muted dark:text-on-dark md:gap-7">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (

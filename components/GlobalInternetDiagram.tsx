@@ -4,7 +4,7 @@ import diagram from "@/public/images/exatel-global-internet.png";
 
 export default function GlobalInternetDiagram() {
   return (
-    <section id="global-internet" className="py-20 bg-white border-y border-line">
+    <section id="global-internet" className="py-20 bg-white border-y border-line scroll-mt-20">
       <div className="section-wrap">
         <SectionHeading
           eyebrow="JARINGAN GLOBAL"
